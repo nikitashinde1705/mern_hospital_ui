@@ -1,0 +1,85 @@
+.sidebar {
+  width: 240px;
+  background: #052f22;
+  color: #cfe8df;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 0;
+  overflow: hidden;
+}
+
+.sidebar-logo {
+  padding: 18px;
+  text-align: center;
+  background: #063b2b;
+}
+
+.sidebar-logo img {
+  width: 140px;
+}
+
+.sidebar-menu {
+  padding: 15px 0;
+}
+
+.menu-section {
+  font-size: 11px;
+  padding: 12px 20px;
+  color: #8fbfb1;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 20px;
+  color: #e6f4ef;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: #0a8f5a;
+  color: #fff;
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #0a8f5a;
+  border-radius: 4px;
+}
+
+
+/* Submenu */
+.submenu {
+  background: #063b2b;
+}
+
+.submenu-item {
+  display: block;
+  padding: 8px 42px;
+  font-size: 13px;
+  color: #cfe8df;
+  text-decoration: none;
+}
+
+.submenu-item:hover,
+.submenu-item.active {
+  background: #0a8f5a;
+  color: #fff;
+}
+.user-role-wrapper {
+  position: relative;
+}

@@ -1,0 +1,209 @@
+/* Shared container */
+.page-container {
+  padding: 20px;
+  background: #f3faf7;
+  min-height: calc(100vh - 64px);
+}
+
+/* Search Section */
+.search-section label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.search-box {
+  display: flex;
+  gap: 10px;
+}
+
+.search-box input {
+  flex: 1;
+}
+
+.search-btn {
+  background: #0a8f5a;
+  border: none;
+  color: #fff;
+  padding: 0 16px;
+  border-radius: 8px;
+}
+
+/* Table Card */
+.table-card {
+  background: #f7fdfb;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.appointment-table thead {
+  background: #063b2b;
+  color: #fff;
+}
+
+.appointment-table th,
+.appointment-table td {
+  vertical-align: middle;
+  font-size: 14px;
+}
+
+.appointment-table small {
+  color: #6c757d;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.icon-btn {
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn.view {
+  background: #e8f1ff;
+  color: #2c6bed;
+}
+
+.icon-btn.edit {
+  background: #e6f7f0;
+  color: #0a8f5a;
+}
+
+/* Table Footer */
+.table-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination select {
+  height: 30px;
+}
+
+/* Orange curved indicator (same as previous page) */
+.section-wrapper {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.section-indicator {
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 12px;
+  height: 80px;
+  border-left: 4px solid #f39c12;
+  border-top: 4px solid #f39c12;
+  border-bottom: 4px solid #f39c12;
+  border-radius: 12px 0 0 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .search-box {
+    flex-direction: column;
+  }
+}
+
+
+/* Tabs */
+.tab-bar {
+  display: flex;
+  background: linear-gradient(90deg, #063b2b, #0a8f5a);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px 0 20px;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  color: #e6f4ef;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-btn.active {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.tab-btn.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  width: 60%;
+  height: 3px;
+  background: #f39c12;
+  border-radius: 4px;
+}
+
+/* Status Badge */
+.status-badge {
+  background: #0a8f5a;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Role table specific */
+.role-table th,
+.role-table td {
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+
+/* Responsive table wrapper */
+.table-responsive-wrapper {
+  width: 100%;
+}
+
+/* Force horizontal scroll on smaller screens */
+@media (max-width: 992px) {
+  .table-responsive-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .table-responsive-wrapper table {
+    min-width: 900px; /* important */
+  }
+}
+
+/* Prevent double scrollbar */
+.section-wrapper,
+.table-card {
+  overflow-x: visible;
+}

@@ -1,0 +1,206 @@
+.page-container {
+  padding: 20px;
+  background: #f3faf7;
+  min-height: calc(100vh - 64px);
+}
+
+/* Top green bar */
+.page-top-bar {
+  background: linear-gradient(90deg, #063b2b, #0a8f5a);
+  padding: 14px 20px;
+  border-radius: 10px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-top-bar h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.page-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.page-actions .btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  border-radius: 8px;
+}
+
+/* Form Card */
+.form-card {
+  background: #f7fdfb;
+  border-radius: 12px;
+  padding: 25px;
+  border-left: 4px solid #f39c12;
+}
+
+/* Title */
+.form-title h5 {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-title p {
+  font-size: 13px;
+  color: #6c757d;
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-card label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #2c3e50;
+}
+
+/* Inputs */
+.form-control,
+.form-select {
+  height: 45px;
+  border-radius: 8px;
+  font-size: 14px;
+  border: 1px solid #dcdfe3;
+}
+
+textarea.form-control {
+  height: auto;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .page-top-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .page-actions {
+    width: 100%;
+  }
+
+  .page-actions .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+/* Common page action button */
+.page-btn {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 6px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Active button */
+.page-btn.active-btn {
+  background-color: #0a8f5a;
+  border-color: #0a8f5a;
+  color: #ffffff;
+}
+
+/* Remove Bootstrap focus border issue */
+.page-btn:focus {
+  box-shadow: none;
+}
+
+
+/* Permissions Box */
+.permissions-box {
+  border: 1px solid #dcdfe3;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 25px;
+  background: #f9fbfa;
+}
+
+.permissions-box h6 {
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* Checkbox Grid */
+.permissions-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.permissions-grid label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* Buttons */
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 25px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.form-actions .btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+/* Hover Effects */
+.form-actions .btn-success:hover {
+  background-color: #08764b;
+}
+
+.form-actions .btn-outline-secondary {
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  background-color: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.form-actions .btn-outline-secondary:hover {
+  background-color: #e6f4ef;   /* light green tint */
+  border-color: #0a8f5a;       /* theme green */
+  color: #0a8f5a;
+  transform: translateY(-1px); /* subtle lift */
+  box-shadow: 0 4px 10px rgba(10, 143, 90, 0.15);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .permissions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* Light green focus (important for consistency) */
+.form-control:focus,
+.form-select:focus {
+  border-color: #0a8f5a;
+  box-shadow: 0 0 0 0.15rem rgba(10, 143, 90, 0.2);
+}
