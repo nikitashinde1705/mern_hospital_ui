@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://nikitashinde1705.github.io/mern_hospital_ui",
+  "homepage": "https://nikitashinde1705.github.io/mern_hospital_ui/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
